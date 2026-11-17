@@ -1,0 +1,44 @@
+{
+  "title": "Dew Point",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dew point",
+        "description": "Choose how dew point sensors are created.",
+        "menu_options": {
+          "auto": "Automatic detection: one sensor on every device that measures both temperature and humidity",
+          "manual": "Manual pair: pick a temperature sensor and a humidity sensor"
+        }
+      },
+      "manual": {
+        "title": "Manual pair",
+        "description": "Creates a dew point sensor from any two sensors, for example when they belong to different devices. If both sensors are part of the same device, the new sensor is attached to it and its name is prefixed with the device name.",
+        "data": {
+          "name": "Name",
+          "temperature_entity": "Temperature sensor",
+          "humidity_entity": "Humidity sensor"
+        },
+        "data_description": {
+          "name": "Name of the dew point sensor to create.",
+          "humidity_entity": "Relative humidity, in %."
+        }
+      }
+    },
+    "error": {
+      "already_detected": "The automatic detection already provides a dew point sensor for these two sensors."
+    },
+    "abort": {
+      "already_configured": "This is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dew_point": {
+        "name": "Dew point"
+      },
+      "dew_point_labeled": {
+        "name": "Dew point {label}"
+      }
+    }
+  }
+}

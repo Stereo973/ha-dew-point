@@ -1,0 +1,44 @@
+{
+  "title": "Point de rosée",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Point de rosée",
+        "description": "Choisissez comment créer les capteurs de point de rosée.",
+        "menu_options": {
+          "auto": "Détection automatique : un capteur sur chaque appareil qui mesure à la fois la température et l'humidité",
+          "manual": "Paire manuelle : choisir un capteur de température et un capteur d'humidité"
+        }
+      },
+      "manual": {
+        "title": "Paire manuelle",
+        "description": "Crée un capteur de point de rosée à partir de deux capteurs quelconques, par exemple lorsqu'ils appartiennent à des appareils différents. Si les deux capteurs font partie du même appareil, le nouveau capteur y est rattaché et son nom est précédé de celui de l'appareil.",
+        "data": {
+          "name": "Nom",
+          "temperature_entity": "Capteur de température",
+          "humidity_entity": "Capteur d'humidité"
+        },
+        "data_description": {
+          "name": "Nom du capteur de point de rosée à créer.",
+          "humidity_entity": "Humidité relative, en %."
+        }
+      }
+    },
+    "error": {
+      "already_detected": "La détection automatique fournit déjà un capteur de point de rosée pour ces deux capteurs."
+    },
+    "abort": {
+      "already_configured": "Cet élément est déjà configuré."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dew_point": {
+        "name": "Point de rosée"
+      },
+      "dew_point_labeled": {
+        "name": "Point de rosée {label}"
+      }
+    }
+  }
+}

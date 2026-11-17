@@ -1,0 +1,12 @@
+{
+  "domain": "dew_point",
+  "name": "Dew Point",
+  "categories": ["helpers.calculate_value", "sensors.temperature_humidity"],
+  "codeowners": ["@stereo973"],
+  "config_flow": true,
+  "documentation": "https://github.com/stereo973/ha-dew-point",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/stereo973/ha-dew-point/issues",
+  "version": "1.0.0"
+}
